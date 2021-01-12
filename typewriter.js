@@ -1,6 +1,5 @@
 const sentence = "hello there from lighthouse labs";
 
-
 const typewriter = function (sentence) {
   // we need to stagger them, one at a time by 50ms
   // we need to gradually increase the lenght of the timeout
@@ -14,11 +13,8 @@ const typewriter = function (sentence) {
     }, timer)
     // increse the accumulator by 50 everytime we loop through the string
     timer += 50
-    console.log(timer)
   }
-
-  console.log(timer)
-  console.log(50 * sentence.length)
+  
   // use scentence length to know when to stop, and do another setTimeout
 
   setTimeout(function () { (process.stdout.write('\n')) }, 50 * sentence.length)
